@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LocationsViewController" customModule="WeatherApp" customModuleProvider="target">
+            <connections>
+                <outlet property="acceptButton" destination="Fuy-D7-rFe" id="SC7-0p-pjy"/>
+                <outlet property="emptyView" destination="Mw4-ds-Gju" id="TMO-kd-FeU"/>
+                <outlet property="locationsTableView" destination="4yM-hE-Mv5" id="mb8-R7-N3W"/>
+                <outlet property="searchBar" destination="XY0-Kt-c5G" id="8XT-lt-3OK"/>
+                <outlet property="view" destination="iN0-l3-epB" id="P9W-mL-Pen"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="XY0-Kt-c5G">
+                    <rect key="frame" x="16" y="44" width="382" height="51"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                </searchBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="4yM-hE-Mv5">
+                    <rect key="frame" x="16" y="95" width="382" height="687"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mw4-ds-Gju">
+                    <rect key="frame" x="0.0" y="95" width="414" height="687"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fuy-D7-rFe">
+                    <rect key="frame" x="16" y="790" width="382" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="AIM-Fq-w79"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                    <connections>
+                        <action selector="acceptButtonAction:" destination="-1" eventType="touchUpInside" id="4Ke-8v-BrE"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Fuy-D7-rFe" secondAttribute="trailing" constant="16" id="3zf-Ej-LKg"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="4yM-hE-Mv5" secondAttribute="trailing" constant="16" id="97t-Ho-vWB"/>
+                <constraint firstItem="4yM-hE-Mv5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="9o8-r3-6WM"/>
+                <constraint firstItem="Fuy-D7-rFe" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="EO2-Fp-884"/>
+                <constraint firstItem="XY0-Kt-c5G" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Ewb-rH-E0c"/>
+                <constraint firstItem="XY0-Kt-c5G" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="F34-oe-pwh"/>
+                <constraint firstItem="Fuy-D7-rFe" firstAttribute="top" secondItem="4yM-hE-Mv5" secondAttribute="bottom" constant="8" id="J7j-JY-B4M"/>
+                <constraint firstItem="4yM-hE-Mv5" firstAttribute="top" secondItem="XY0-Kt-c5G" secondAttribute="bottom" id="Lfj-Hr-DX5"/>
+                <constraint firstItem="Fuy-D7-rFe" firstAttribute="top" secondItem="Mw4-ds-Gju" secondAttribute="bottom" constant="8" id="PJy-8u-sS6"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="XY0-Kt-c5G" secondAttribute="trailing" constant="16" id="VHW-sA-eMz"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Fuy-D7-rFe" secondAttribute="bottom" constant="24" id="XkR-2u-Hlb"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Mw4-ds-Gju" secondAttribute="trailing" id="bqY-4g-U5A"/>
+                <constraint firstItem="Mw4-ds-Gju" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="p3M-uW-oUO"/>
+                <constraint firstItem="Mw4-ds-Gju" firstAttribute="top" secondItem="XY0-Kt-c5G" secondAttribute="bottom" id="yWi-ON-zHN"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="139.95535714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
